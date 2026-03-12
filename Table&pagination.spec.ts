@@ -2,7 +2,11 @@ import {test, expect, chromium} from "@playwright/test"
 import { log } from "console"
 import { loadavg } from "os"
 
+import { defineConfig } from '@playwright/test';
 
+export default defineConfig({
+  reporter: [['html', { open: 'never' }]]
+});
 
 
   const obj : { [key:string] : string | number } = { }
@@ -69,4 +73,5 @@ import { loadavg } from "os"
         }
       
   })
+
   
